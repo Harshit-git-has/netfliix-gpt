@@ -1,6 +1,6 @@
 import { useState, useRef} from "react";
-import Header from "./Header"
-import {checkValidData } from "../utils/validate";
+import Header from "./Header";
+import { checkValidData } from "../utils/validate";
 
 const Login = () => {
      const [isSignInForm, setIsSignInForm] = useState(true);
