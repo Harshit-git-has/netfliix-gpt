@@ -10,6 +10,20 @@
  - Firebase Setup
  - Deploying our app to production
  - Create signUp User account
+ - Implement Sign in user Api
+ - Created redux Store with userSlice
+ - Implemented Signout
+ - update profile
+ - Bug fix: Sign Up user displayName and profile picture update
+
+ - Buf fix: if the user is not logged in redirect/browse to the Login page and vice-versa
+ 
+ - Unsubscribed to the onAuthStateChanged callBack
+ - Add hardcoded values to the constant file
+
+ 
+ 
+ 
 
 
 
