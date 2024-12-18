@@ -11,7 +11,6 @@ import { USER_AVATAR } from "../utils/constants";
 const Login = () => {
      const [isSignInForm, setIsSignInForm] = useState(true);
      const [errorMessage, setErrorMessage] = useState(null);
-    
      const dispatch = useDispatch();
 
      const name = useRef(null);
@@ -25,17 +24,29 @@ const Login = () => {
         
       //  Sign In Sign up Logic
       if(!isSignInForm) {
-        createUserWithEmailAndPassword(auth,email.current.value, password.current.value)
+        createUserWithEmailAndPassword(
+          auth,
+          email.current.value, 
+          password.current.value
+        )
+        
+        
         .then((userCredential) => {
         const user = userCredential.user;
-
-          updateProfile(user, {
+            updateProfile(user, {
             displayName: name.current.value,
             photoURL: USER_AVATAR,
           })
            .then(() => {
             const {uid, email, displayName, photoURL} = auth.currentUser;
-            dispatch(addUser({uid:uid, email:email, displayName: displayName, photoURL:photoURL}));
+            dispatch(
+              addUser({
+                uid:uid, 
+                email:email, 
+                displayName: displayName, 
+                photoURL:photoURL
+              })
+            );
                   
            })
            .catch((error) => {
@@ -50,20 +61,24 @@ const Login = () => {
         });
 
       } else {
-      signInWithEmailAndPassword(auth,email.current.value, password.current.value)
+      signInWithEmailAndPassword(
+        auth,
+        email.current.value, 
+        password.current.value
+      )
        .then((userCredential) => {
       // Signed in 
       const user = userCredential.user;
     
       
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    setErrorMessage(errorCode+ "-"+ errorMessage)
-  });
+      })
+        .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        setErrorMessage(errorCode+ "-"+ errorMessage)
+      });
       }
-     };
+    };
 
      const toggleSignInForm = () => {
         setIsSignInForm(!isSignInForm);
