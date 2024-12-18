@@ -30,6 +30,8 @@
  - Update store with trailer video data
  - Embedded the Youtube video and make it autoPlay and mute 
  - Tailwind Classes to make main container look awesome
+ - Build Secondary component
+ - Building custom hooks like (useTrending, useTopRated && many more)
 
  
  

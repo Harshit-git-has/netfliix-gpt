@@ -6,12 +6,14 @@ export const USER_AVATAR =
 
 
 export const API_OPTIONS =  {
-        method: 'GET',
-        headers: {
-          accept: 'application/json',
-          Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlZDMxMDdiNGU0YzhiYzI4ZjlmMWRjYjM4MmY4NzczZSIsIm5iZiI6MTczNDQxNDg5Ni4wNzcsInN1YiI6IjY3NjExMjMwNWM3YTFlZGIxYmI0Zjg1OSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.NZbguGb8u5fXAqf8HnGB5g1yiYjC4TfnF0kJBvuMFyQ'
-        },
-      };
+  method: 'GET',
+  headers: {
+  accept: 'application/json',
+  Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlZDMxMDdiNGU0YzhiYzI4ZjlmMWRjYjM4MmY4NzczZSIsIm5iZiI6MTczNDQxNDg5Ni4wNzcsInN1YiI6IjY3NjExMjMwNWM3YTFlZGIxYmI0Zjg1OSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.NZbguGb8u5fXAqf8HnGB5g1yiYjC4TfnF0kJBvuMFyQ'
+ },
+};
+
+export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w500";
       
       
  
