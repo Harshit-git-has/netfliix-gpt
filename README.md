@@ -31,7 +31,12 @@
  - Embedded the Youtube video and make it autoPlay and mute 
  - Tailwind Classes to make main container look awesome
  - Build Secondary component
- - Building custom hooks like (useTrending, useTopRated && many more)
+ - Building custom hooks like (useTrending, &&   many more)
+ - Build The GPT page
+ - GPT Search Bar
+ - (FEATURE) Multi-Language Feature in our App
+ - 
+ 
 
  
  

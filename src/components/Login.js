@@ -5,7 +5,7 @@ import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfi
 import { auth } from "../utils/firebase";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
-import { USER_AVATAR } from "../utils/constants";
+import { BG_URL, USER_AVATAR } from "../utils/constants";
 
 
 const Login = () => {
@@ -89,16 +89,13 @@ const Login = () => {
         <Header />
        <div className="absolute">
         <img className=""
-        src="https://assets.nflxext.com/ffe/siteui/vlv3/ce449112-3294-449a-b8d3-c4e1fdd7cff5/web/IN-en-20241202-TRIFECTA-perspective_0acfb303-6291-4ad1-806f-dda785f6295a_large.jpg" 
-        alt="logo"
-        />
+        src={BG_URL} alt="logo" />
     </div>
     <form onSubmit={(e) =>e.preventDefault()} className="rounded-2xl w-3/12 absolute p-12 bg-black my-36 mx-auto right-0 left-0 text-white bg-opacity-70">
 
         <h1 className=" font-bold text-3xl py-s">{isSignInForm ? "Sign In" : "Sign up"}</h1>
 
         {!isSignInForm && (<input ref={name} type="text" placeholder="Name" className=" rounded-lg p-4 my-4 w-full bg-gray-500"/> )}
-        {/* {!isSignInForm && (<input type="number" placeholder="Phone number" className=" rounded-lg p-4 my-4 w-full bg-gray-500"/> )} */}
 
         <input ref={email} type="text" placeholder="E-mail Address" className=" rounded-md p-4 my-4 w-full bg-gray-500"/>
         <input ref={password} type="password" placeholder="password" className=" rounded-md p-4 my-4 w-full bg-gray-500" /> 
