@@ -75,7 +75,7 @@ const Login = () => {
         .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        setErrorMessage(errorCode+ "-"+ errorMessage)
+        setErrorMessage(errorCode+ "-" + errorMessage)
       });
       }
     };
@@ -86,7 +86,7 @@ const Login = () => {
 
   return (
     <div>
-        <Header />
+      <Header />
        <div className="absolute">
         <img className=""
         src={BG_URL} alt="logo" />

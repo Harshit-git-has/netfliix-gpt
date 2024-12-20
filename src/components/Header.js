@@ -23,7 +23,7 @@ const Header = () => {
     
   };
      useEffect(() => {
-      const unsubscribe= onAuthStateChanged(auth, (user) => {
+      const unsubscribe  = onAuthStateChanged(auth, (user) => {
       if (user) {
          const {uid, email, displayName, photoURL} = user;
          dispatch(
@@ -46,7 +46,8 @@ const Header = () => {
 
      // Unsubscribe when component unmounts
     return () => unsubscribe();
-    },[]);
+    
+    }, []);
   
     
   const handleGptSearchClick = () => {

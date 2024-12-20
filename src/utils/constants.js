@@ -8,8 +8,8 @@ export const USER_AVATAR =
 export const API_OPTIONS =  {
   method: 'GET',
   headers: {
-  accept: 'application/json',
-  Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlZDMxMDdiNGU0YzhiYzI4ZjlmMWRjYjM4MmY4NzczZSIsIm5iZiI6MTczNDQxNDg5Ni4wNzcsInN1YiI6IjY3NjExMjMwNWM3YTFlZGIxYmI0Zjg1OSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.NZbguGb8u5fXAqf8HnGB5g1yiYjC4TfnF0kJBvuMFyQ'
+    accept: 'application/json',
+    Authorization: "Bearer" + process.env.REACT_APP_TMDB_KEY,
  },
 };
 
@@ -22,10 +22,7 @@ export const BG_URL =
 export const SUPPORTED_LANGUAGE = [{ identifier:"en", name:"English"}, 
 { identifier:"hindi", name:"Hindi"},{ identifier:"spanish", name:"Spanish"}]
       
- 
-
-
-
+export const OPENAI_KEY = process.env.REACT_APP_OPENAI_KEY;
 
 
 

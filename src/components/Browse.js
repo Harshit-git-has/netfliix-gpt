@@ -11,7 +11,7 @@ import GptSearch from "./GptSearch";
 
 
 const Browse = () => {
-  const showGptSearch = useSelector(store => store.gpt.showGptSearch)
+  const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
    
 useNowPlayingMovies();
 usePopularMovies();
@@ -22,12 +22,12 @@ useUpcoming();
   return (
     <div>
       <Header />
-      {
-        showGptSearch ?( <GptSearch />
+      {showGptSearch ? ( 
+        <GptSearch />
 
         ):(
         <>
-        <MainContainer />
+        <MainContainer />  
         <SecondaryContainer />
         </>
       )}
